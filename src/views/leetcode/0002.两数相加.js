@@ -20,14 +20,14 @@
 
 // 模拟
  var addTwoNumbers1 = function(l1, l2) {
-     let sum = new ListNode('0') // 创建也一个头链表用于保存结果返回
+     let sum = new ListNode('0') // 创建一个头链表用于保存结果返回
      let head = sum // 保存头链表的位置
-     let addOne = 0
-     while (addOne || l1 || l2) {
-        let val1 = l1 !=null ? l1.val : 0
+     let carry = 0
+     while (carry || l1 || l2) {
+        let val1 = l1 !=null ? l1.val : 0 //补0
         let val2 = l2 !=null ? l2.val : 0
-        let r1 = val1 + val2 + addOne
-        addOne =  r1 >= 10 ? 1 : 0 //求和进位
+        let r1 = val1 + val2 + carry 
+        carry =  r1 >= 10 ? 1 : 0 //求和进位
         sum.next = new ListNode(r1 % 10)
         sum = sum.next
         if (l1) l1 = l1.next
@@ -36,14 +36,6 @@
     return head.next
 }
 
-//递归
-var addTwoNumbers2 = function(l1, l2) {
-    let arr = []
-    let i = 0
-    while(l1 || l2) {
-       let num
-    }
-}
 const l1 = {
     val : 9,
     next: {
@@ -77,6 +69,6 @@ const l2 = {
             }
         } 
     }
-} // 342+465 = 807 7>0>8
+} 
+// 342+465 = 807 7>0>8
 console.log(addTwoNumbers1(l1, l2))
-// console.log(addTwoNumbers2(l1, l2))
