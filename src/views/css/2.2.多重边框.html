@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 100px auto;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: wheat;
+            /* 可以实现多重边框,用逗号间隔 */
+            box-shadow: 0 0 0 10px #655, 
+                        0 0 0 15px pink,
+                        0 2px 5px 15px rgba(0, 0, 0, 0.6);             
+            outline: 1px dashed blue;
+            /* 控制边框和元素的距离 */
+            outline-offset: -5px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

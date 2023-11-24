@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 100px auto;
+        }
+        body {
+            display: flex;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background: linear-gradient(#fb3 20%, #acd 80%);
+        }
+        .box2 {
+            background: linear-gradient(#fb3 30%, #acd 0, #aff 60%, #fbb 0);
+            background-size: 100% 40px;
+        }
+        .box3 {
+            background: linear-gradient(to right, #fb3 30%, #acd 0, #aff 60%, #fbb 0);
+            background-size:  40px 100%;
+        }
+        .box4 {
+            background: linear-gradient(45deg, #fb3 30%, rgb(193, 221, 170) 0, #aff 60%, #fbb 0);
+            background-size:  40px 40px;
+        }
+        .box5 {
+            background: repeating-linear-gradient(60deg, #aff, #aff 15px,#fbb 0, #fbb 30px);
+        }
+        .box6 {
+            background: #58a;
+            background-image: repeating-linear-gradient(30deg, hsla(0,0%,100%,.1) ,
+                                                                hsla(0,0%,100%,.1) 15px,
+                                                                transparent 0, transparent 30px);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 渐变颜色 -->
+    <div class="box1"></div>
+    <!-- 横向条纹 -->
+    <div class="box2"></div>
+    <!-- 竖向条纹 -->
+    <div class="box3"></div>
+    <!-- 斜向条纹 -->
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+</body>
+</html>
